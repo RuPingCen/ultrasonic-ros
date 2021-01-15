@@ -1,24 +1,21 @@
 
-# IMU_Driver
+# ultrasonic-ros
 
-目前支持 第七实验室的IMU和维特智能的IMU设备 WTGAHRS1 （非官方驱动，为方便个人适用而写）
-
+多超声波模块读取ROS节点，该模块支持同时读取12个通道的超声波模块数据，目前支持（HC-SR04）。该节点为模块配套的ROS节点，用于接收模块上传的数据，并发布到ROS Topic上
  ## 1.1 下载与配置
 
  1. 安装依赖项
  
-    sudo apt-get install ros-kinetic-serial
+    sudo apt-get install ros-melodic-rosserial
     
  2. cd catkin_ws/src
  
- 3. git clone  https://github.com/RuPingCen/IMU_Driver.git
+ 3. git clone https://github.com/RuPingCen/ultrasonic-ros.git
 
  4. catkin_make
  
- ## 1.2 启动维特智能的IMU设备
+ ## 1.2 启动节点
  
-     roslaunch imu_driver wit_imu.launch
+     roslaunch ultrasonic_ros ultrasonic_ros.launch
      
-  ## 1.3 启动第七实验室的IMU设备
  
-     roslaunch imu_driver seven_lab.launch
