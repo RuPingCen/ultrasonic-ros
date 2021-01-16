@@ -1,15 +1,14 @@
 <launch>
-
  
-  <param name="dev" value="/dev/ttyUSB0" type="str" />
-  <param name="buad" value="115200" type="int" />
-  <param name="time_out" value="1000" type="int" />
-  <param name="hz" value="100" type="int" />
+  <node pkg="ultrasonic_ros" type="ultrasonic_ros" name="ultrasonic_ros" output="screen">
 
-  <node pkg="imu_driver" type="seven_lab" name="seven_lab" output="screen">
- 	
+	<param name="pub_topic_ultra" value="/ultrasonic/data" type="str" />
+
+	<param name="dev" value="/dev/ttyUSB0" type="str" />
+	<param name="buad" value="115200" type="int" />
+	<param name="time_out" value="1000" type="int" />
+	<param name="hz" value="20" type="int" />
+	<param name="show_message" value="1" type="int" />
   </node>
-
- 
-
+  
 </launch>
