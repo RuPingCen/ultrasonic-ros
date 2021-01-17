@@ -12,7 +12,7 @@
 
 更为详细的教程可以参考[博客-熊猫飞天](https://blog.csdn.net/crp997576280)
 
-![fig](https://github.com/RuPingCen/ultrasonic-ros/raw/master/reference/fig/fig.jpg)
+![fig](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig.jpg)
 
 # 2 使用教程
 ## 2.1 接线说明
@@ -22,24 +22,24 @@
 - 绿色灯为电源指示灯
 - 红色灯闪烁频率大约为20Hz 表示正常测量过程
 
-![fig2-1](https://github.com/RuPingCen/ultrasonic-ros/raw/master/reference/fig/fig2-1.jpg)
+![fig2-1](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig2-1.jpg)
 
-超声波接线说明，如下图： （ 红色——VCC 、 		黑色——GND 、		黄色——Trig 		绿色——Echo）
+超声波接线说明，如下图： （ 红色——VCC 、 		黑色——GND 、		黄色——Trig 、 绿色——Echo）
   
-![fig2-3](https://github.com/RuPingCen/ultrasonic-ros/raw/master/reference/fig/fig2-3.png)
+![fig2-3](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig2-3.png)
 
 超声波引脚对应图
 
-![fig2-2](https://github.com/RuPingCen/ultrasonic-ros/raw/master/reference/fig/fig2-2.png)
+![fig2-2](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig2-2.png)
 
 SWD下载接口线序如下图所示（不需要更新程序则可以忽略该步骤）
 
-![fig2-4](https://github.com/RuPingCen/ultrasonic-ros/raw/master/reference/fig/fig2-4.png)
+![fig2-4](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig2-4.png)
 
 ## 2.2 上传协议
 数据格式为： 帧头+数据长度+命令类型+数据+校验+帧尾。数据上传频率为20Hz，波特率使用115200。
 
-![fig2-6](https://github.com/RuPingCen/ultrasonic-ros/raw/master/reference/fig/fig2-6.png)
+![fig2-6](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig2-6.png)
 
 - **帧头**：固定为两个字节： 0xAE, 0xEE
 - **数据长度**：为所有字节的和（包含了帧头和帧尾）
@@ -73,7 +73,7 @@ SWD下载接口线序如下图所示（不需要更新程序则可以忽略该�
   roslaunch ultrasonic_ros ultrasonic_ros.launch
 ```
 
-![fig3-1](https://github.com/RuPingCen/ultrasonic-ros/raw/master/reference/fig/fig3-1.png)
+![fig3-1](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig3-1.png)
      
 使用 echo 命令打印查看超声波的数据
 
@@ -81,7 +81,7 @@ SWD下载接口线序如下图所示（不需要更新程序则可以忽略该�
   rostopic echo /ultrasonic/data
 ```
 
-![fig3-2](https://github.com/RuPingCen/ultrasonic-ros/raw/master/reference/fig/fig3-2.png)
+![fig3-2](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig3-2.png)
 
 使用 hz 命令查看话题发布的频率
 
@@ -89,7 +89,7 @@ SWD下载接口线序如下图所示（不需要更新程序则可以忽略该�
   rostopic hz /ultrasonic/data 
 ```
 
-![fig3-3](https://github.com/RuPingCen/ultrasonic-ros/raw/master/reference/fig/fig3-3.png)
+![fig3-3](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig3-3.png)
 
 
 ## 3.3 常见问题-无串口权限
@@ -98,11 +98,11 @@ SWD下载接口线序如下图所示（不需要更新程序则可以忽略该�
  
 **step1：** 检查是否识别到USB转串口驱动
 
-![fig3-4](https://github.com/RuPingCen/ultrasonic-ros/raw/master/reference/fig/fig3-4.png)
+![fig3-4](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig3-4.png)
 
 查看设备的ID号    ls /dev/ttyUSB*
 
-![fig3-4](https://github.com/RuPingCen/ultrasonic-ros/raw/master/reference/fig/fig3-5.png)
+![fig3-4](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig3-5.png)
 
 这里我们可以通过一个简单的方式来修改串口权限
 
