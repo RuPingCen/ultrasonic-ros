@@ -184,7 +184,7 @@ void analy_ultra_Frame(uint8_t data_raw[], int data_length)
 							if(m>11) 
 								continue;
 							
-							ultra_value[m] = (data_raw[kk + index_i+1]*256+data_raw[kk + index_i]);	
+							ultra_value[m] = (data_raw[kk + index_i]*256+data_raw[kk + index_i+1]);	
 							m++;		
 						}
 						if(show_message)
