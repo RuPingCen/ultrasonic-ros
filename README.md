@@ -8,9 +8,9 @@
 - **3：** 开源ROS节点程序，并提供单片机端hex文件下载，使用其他单片机开发板也可以轻易使用。
 
 
-板子为自制打样板，可以代为制作，手工焊接，仅收取成本和少量跑腿费（148/张），有需要可以在闲鱼搜索  
+板子为自制打样板，可以代为制作，手工焊接，仅收取成本和少量跑腿费（148/张），有需要可以在闲鱼搜索，或者用支付宝扫描闲鱼信息  
 **2€2fEGczlp8YJ€ https://m.tb.cn/h.4lw1yij  我在闲鱼发布了【该模块是一个开源超声波读取模块，并提供了配套的ROS节點，接】**
-
+<div style="text-align:center"> <img width="300" height="300" src="https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig0-1.png"/></div>
 更为详细的教程可以参考[博客-熊猫飞天](https://blog.csdn.net/crp997576280)
 
 ![fig](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig.jpg)
@@ -92,6 +92,10 @@ SWD下载接口线序如下图所示（不需要更新程序则可以忽略该�
 
 ![fig3-3](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig3-3.png)
 
+**注：** 如果不需要再终端打印串口的数据，可以通过目录 “ultrasonic-ros/launch” 目录下的 ultrasonic_ros.launch 文件进行修改。 将 ultrasonic_ros.launch 文件中的参数 show_message 设置为0 既可以。
+ ```
+<param name="show_message" value="0" type="int" />
+```
 
 ## 3.3 常见问题-无串口权限
 
