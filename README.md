@@ -14,6 +14,7 @@
 
 ![fig](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig.jpg)
 
+![fig](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig2-9.png)
 # 2 使用教程
 ## 2.1 接线说明
 如下图所示，使用模块时需连接超声波模块
