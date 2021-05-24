@@ -10,7 +10,7 @@
 
 板子为自制打样板，可以代为制作，手工焊接，仅收取成本和少量跑腿费（148/张），有需要可以在[淘宝店铺](https://shop191619888.taobao.com/?spm=2013.1.1000126.d21.539157abO0f5XW)购买。或者闲鱼搜索 **多路超声波测距模块**
 
-更为详细的教程可以参考[博客-熊猫飞天](https://blog.csdn.net/crp997576280)
+更为详细的教程可以参考[博客-熊猫飞天](https://rupingcen.blog.csdn.net/article/details/112744250)
 
 ![fig](https://github.com/RuPingCen/blog/raw/master/ultrasonic-ros/fig/fig.jpg)
 
@@ -138,3 +138,6 @@ KERNEL=="ttyUSB*", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", MODE:="077
  ```
 sudo cp ultrasonic.rules /etc/udev/rules.d/
 ```
+
+# 4 更新程序
+为了使得没有购买这个板子的小伙伴使用我们的程序，我们提供了Hex文件下载。通过STLink进行烧写程序，对照我们提供的原理图接线也可以实现多个超声波的读取（需要一定的动手能力）。板载芯片为STM32F103C8T6。具体的烧写教程可参[考配套教程](https://rupingcen.blog.csdn.net/article/details/112744250)
